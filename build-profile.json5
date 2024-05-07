@@ -1,6 +1,20 @@
 {
   "app": {
-    "signingConfigs": [],
+    "signingConfigs": [
+      {
+        "name": "default",
+        "type": "HarmonyOS",
+        "material": {
+          "certpath": "/Users/gamejoye/.ohos/config/auto_debug_harmonyos-github-action-example_com.phodal.myapplication_30086000760678000.cer",
+          "storePassword": "0000001B388578D0FC481BF4420270FCC6E7275CEC9164AAEC247D516D8B08531FC791CE6D0CCE3E303DEE",
+          "keyAlias": "debugKey",
+          "keyPassword": "0000001B057F5B1079508B89B84F7CB23896E39562A1AA745093F27A57198DF6FF9B7621DD672F27F50222",
+          "profile": "/Users/gamejoye/.ohos/config/auto_debug_harmonyos-github-action-example_com.phodal.myapplication_30086000760678000.p7b",
+          "signAlg": "SHA256withECDSA",
+          "storeFile": "/Users/gamejoye/.ohos/config/auto_debug_harmonyos-github-action-example_com.phodal.myapplication_30086000760678000.p12"
+        }
+      }
+    ],
     "compileSdkVersion": 9,
     "compatibleSdkVersion": 9,
     "products": [

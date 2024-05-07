@@ -8,6 +8,11 @@ struct Index {
   @State lastMessage: string = "hello,world"
 
   build() {
+    Column() {
+      Text('Hello world')
+    }
+    .width('100%')
+    .height('100%')
     // 生成一个经典的前端 counter
     // Column({}) {
     //   Text('Blog Title').fontSize(24).fontWeight(FontWeight.Bold)
