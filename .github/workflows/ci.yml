@@ -65,8 +65,7 @@ jobs:
           npm install @ohos/hvigor@2.4.2 @ohos/hvigor-ohos-plugin@2.4.2
 
       - name: Build
-        with:
-          timeout-minutes: 5
+        timeout-minutes: 5
         run: |
           # for ERROR: Unable to find 'hwsdk.dir' in 'local.properties' or 'HOS_SDK_HOME' in the system environment path.
           export HOS_SDK_HOME=$(pwd)/hwsdk
