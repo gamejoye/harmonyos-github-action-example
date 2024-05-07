@@ -79,4 +79,4 @@ jobs:
           path: entry/build/default/outputs/default/entry-default-unsigned.hap
       - name: Run Test
         run:
-          echo "Test Start"
+          echo "Test Starting"
