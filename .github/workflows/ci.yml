@@ -29,7 +29,7 @@ jobs:
         id: get_assets
         run: |
           # 获取 release 的信息
-          RELEASE_JSON=$( curl -s -H "Accept: application/vnd.github.v3+json" https://api.github.com/repos/harmonyos-dev/hos-sdk/releases/latest )
+          RELEASE_JSON=$(curl -s -H "Accept: application/vnd.github.v3+json" https://api.github.com/repos/harmonyos-dev/hos-sdk/releases/latest)
           
           echo "$RELEASE_JSON"
           
@@ -65,6 +65,8 @@ jobs:
           npm install @ohos/hvigor@2.4.2 @ohos/hvigor-ohos-plugin@2.4.2
 
       - name: Build
+        with:
+          timeout-minutes: 5
         run: |
           # for ERROR: Unable to find 'hwsdk.dir' in 'local.properties' or 'HOS_SDK_HOME' in the system environment path.
           export HOS_SDK_HOME=$(pwd)/hwsdk
@@ -75,3 +77,6 @@ jobs:
         with:
           name: entry-default-unsigned.hap
           path: entry/build/default/outputs/default/entry-default-unsigned.hap
+      - name: Run Test
+        run:
+          echo "Test Start"
