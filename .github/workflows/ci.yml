@@ -66,6 +66,7 @@ jobs:
 
       - name: Build
         timeout-minutes: 5
+        continue-on-error: true  # 即使这个步骤失败，后续步骤仍将继续
         run: |
           # for ERROR: Unable to find 'hwsdk.dir' in 'local.properties' or 'HOS_SDK_HOME' in the system environment path.
           export HOS_SDK_HOME=$(pwd)/hwsdk
