@@ -29,7 +29,7 @@ jobs:
         id: get_assets
         run: |
           # 获取 release 的信息
-          RELEASE_JSON=$(curl -s -H "Accept: application/vnd.github.v3+json" https://api.github.com/repos/harmonyos-dev/hos-sdk/releases/latest)
+          RELEASE_JSON=$( curl -s -H "Accept: application/vnd.github.v3+json" https://api.github.com/repos/harmonyos-dev/hos-sdk/releases/latest )
           
           # 从 release 的信息中提取需要的 asset URL
           ASSET_URL=$(echo "$RELEASE_JSON" | jq -r '.assets[] | select(.name | test("commandline-tools-mac-2.0.0.2.zip")) | .browser_download_url')
